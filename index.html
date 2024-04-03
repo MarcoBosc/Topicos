@@ -5,9 +5,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/style.css">
+</head>
+<body>
     <div class="container">
         <h1>Cadastro de usuários</h1>
-        <form action="#" method="POST">
+        <form id="form">
             <div class="inputs">
                 <div class="input">
                     <label for="nome">Nome / Razão social <span class="required">*</span></label><br>
@@ -15,11 +17,11 @@
                 </div>
                 <div class="input">
                     <label for="cpf_cnpj">CPF / CNPJ <span class="required">*</span></label><br>
-                    <input type="text" id="cpf_cnpj" name="cpf_cnpj" required><br><br>
+                    <input type="text" id="cpf_cnpj" name="cpf_cnpj" required oninput="maskCPFCNPJ(this)" ><br><br>
                 </div>
                 <div class="input">
                     <label for="data_nascimento">Data de Nascimento <span class="required">*</span></label><br>
-                    <input class="dateInput" type="date" id="data_nascimento" name="data_nascimento" onchange="validateDateNascimento()" required><br><br>
+                    <input class="dateInput" type="date" id="data_nascimento" name="data_nascimento" onchange="maskDateNascimento()" required><br><br>
                 </div>
             </div>
             <div class="inputs">
@@ -37,7 +39,7 @@
                 </div>
                 <div class="input">
                     <label for="data_cadastro">Data de Cadastro</label><br>
-                    <input class="dateInput" type="date" id="data_cadastro" name="data_cadastro" onchange="validateDateCadastro()"><br><br>
+                    <input class="dateInput" type="date" id="data_cadastro" name="data_cadastro" onchange="maskDateCadastro()"><br><br>
                 </div>
             </div>
             <div class="inputs">
@@ -92,12 +94,7 @@
         <div class="p">
             <p><span class="required">*</span>Campos Obrigatórios</p>
         </div>
-
     </div>
-</head>
-
-<body>
-
     <script src="/script.js"></script>
 </body>
 

@@ -10,6 +10,7 @@ body {
     align-items: center;
     justify-content: center;
     background: linear-gradient(to bottom, #0e7dd8b4, #b714cc93, #6f0fc993);
+    background-image: url("https://i.pinimg.com/originals/4e/de/5a/4ede5a33c5490195b2b17466ad26d124.gif");
 }
 
 .required {
@@ -17,6 +18,7 @@ body {
 }
 
 .container {
+    color: #f7f7f7;
     box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
     background-color: #f7f7f7;
     display: flex;
@@ -27,6 +29,9 @@ body {
     border-radius: 10px;
     height: 45%;
     width: 50%;
+    background: linear-gradient(to bottom, #0e7dd8b4, #b714cc93, #6f0fc993);
+    animation: slideLeft 1s forwards;
+    margin-left: -100%;
 }
 
 h1 {
@@ -37,6 +42,7 @@ h1 {
     width: 100%;
     display: flex;
     padding-left: 5%;
+    color: #f7f7f7;
 }
 
 form {
@@ -45,6 +51,7 @@ form {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    color: #f7f7f7;
 }
 
 input, select {
@@ -53,6 +60,8 @@ input, select {
     border-radius: 5px;
     border: 1px solid gray;
     padding-left: 5px;
+    background-color: rgba(82, 81, 81, 0.5);
+    color: #f7f7f7;
 }
 
 #nome {
@@ -105,4 +114,14 @@ input, select {
     align-items: center;
     justify-content: flex-end;
     margin-right: 10%;
+}
+
+
+@keyframes slideLeft {
+    from {
+        margin-left: 120%;
+    }
+    to {
+        margin-left: 0;
+    }
 }
