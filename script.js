@@ -168,10 +168,11 @@ document.addEventListener('DOMContentLoaded', function() {
         console.log(nome, cpf_cnpj, data_nascimento, endereco, bairro, cep, data_cadastro, municipio, telefone, celular, uf);
         let isValidCpf = validateCPF(cpf_cnpj)
         let isValidCNPJ = validateCNPJ(cpf_cnpj)
-        if(!isValidCpf || !isValidCNPJ && nome === '' && cpf_cnpj === '' && data_nascimento === '' && endereco === '' && celular === ''){
+        if(!isValidCpf && !isValidCNPJ || nome === '' || cpf_cnpj === '' 
+        || data_nascimento === '' || endereco === '' || celular === ''){
             alert("Confira os campos e tente novamente")  
             return 
         }
-        alert("Usuário cadastrado com sucesso!") 
+        alert(`Usuário ${nome} cadastrado com sucesso!`) 
     });
 });
